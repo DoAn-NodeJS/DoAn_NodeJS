@@ -1,7 +1,7 @@
 var MyConstants = {
-  DB_SERVER: 'cluster0-2vkmv.mongodb.net',
-  DB_USER: 'huyhoangvole',
-  DB_PASS: 'huyhoang.vole',
+  DB_SERVER: 'cluster0-sakzu.mongodb.net',
+  DB_USER: 'nodejsk24vlu',
+  DB_PASS: 'VLUnodejsk24',
   DB_DATABASE: 'DoAn_NodeJS',
   HOSTNAME: 'localhost:3000',
   EMAIL_USER: 'hoang.187pm20475@vanlanguni.vn',
