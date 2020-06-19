@@ -56,12 +56,12 @@ router.post('/signup', async function (req, res) {
     if (newID) {
       var result = await EmailUtil.send(email, newID, token);
       if (result) {
-        MyUtil.showAlertAndRedirect(res, 'CHECK EMAIL!', './login');
+        MyUtil.showAlertAndRedirect(res, 'VUI LÒNG KIỂM TRA EMAIL', './login');
       } else {
-        MyUtil.showAlertAndRedirect(res, 'EMAIL FAILURE!', './signup');
+        MyUtil.showAlertAndRedirect(res, 'EMAIL ĐÃ TỒN TẠI', './signup');
       }
     } else {
-      MyUtil.showAlertAndRedirect(res, 'INSERT FAILURE!', './signup');
+      MyUtil.showAlertAndRedirect(res, 'THẤT BẠI', './signup');
     }
   }
 });
@@ -70,9 +70,9 @@ router.get('/verify', async function (req, res) {
   var token = req.query.token;
   var result = await CustomerDAO.active(_id, token, 1);
   if (result) {
-    MyUtil.showAlertAndRedirect(res, 'OK BABY!', './login');
+    MyUtil.showAlertAndRedirect(res, 'TÀI KHOẢN ĐÃ ĐƯỢC KÍCH HOẠT!', './login');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './signup');
+    MyUtil.showAlertAndRedirect(res, 'THẤT BẠI', './signup');
   }
 });
 router.get('/login', function (req, res) {
