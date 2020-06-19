@@ -86,7 +86,7 @@ router.post('/login', async function (req, res) {
     req.session.customer = customer;
     res.redirect('./home');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './login');
+    MyUtil.showAlertAndRedirect(res, 'THẤT BẠI', './login');
   }
 });
 router.get('/logout', function (req, res) {

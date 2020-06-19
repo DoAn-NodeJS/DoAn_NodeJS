@@ -2,26 +2,27 @@
 
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
 <body class="customer">
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
   <div class="login-customers">
-    <h2 class="text-center">CUSTOMER LOGIN</h2>
+    <h2 class="text-center">ĐĂNG NHẬP</h2>
     <form action="./login" method="POST">
       <table class="align-center">
         <tr>
-          <td></td>
-          <td><input type="text" placeholder="Username" required /></td>
+          <td class="Username">Tên tài Khoản</td>
+          <td><input type="text" name="txtUsername" required /></td>
+        </tr>
+        <tr>
+          <td class="Password">Mật Khẩu</td>
+          <td><input type="password" name="txtPassword" required /></td>
         </tr>
         <tr>
           <td></td>
-          <td><input type="password" placeholder="Password" required /></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="submit" value="LOGIN" /></td>
+          <td><input class="btn btn-primary" type="submit" value="Đăng Nhập" /></td>
         </tr>
         <tr>
           <td></td>
