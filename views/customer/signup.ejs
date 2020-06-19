@@ -2,38 +2,44 @@
 
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+    body{
+      background-image: url("https://previews.123rf.com/images/vectomart/vectomart1210/vectomart121000059/15803400-illustration-of-different-shopping-bag-on-sale-background.jpg")
+    }
+  </style>
 </head>
 
 <body class="customer">
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
-  <div class="align-center">
-    <h2 class="text-center ">SIGN-UP</h2>
+  <div class="sign-up">
+    <h2 class="rainbow-text ">ĐĂNG KÝ</h2>
     <form action="./signup" method="POST">
       <table class="align-center">
         <tr>
-          <td>Username</td>
+          <td class="sign-up1">Tên đăng nhập</td>
           <td><input type="text" name="txtUsername" required /></td>
         </tr>
         <tr>
-          <td>Password</td>
+          <td class="sign-up1">Mật khẩu</td>
           <td><input type="password" name="txtPassword" pattern=".{3,}" required /></td>
         </tr>
         <tr>
-          <td>Name</td>
+          <td class="sign-up1">Tên</td>
           <td><input type="text" name="txtName" required /></td>
         </tr>
         <tr>
-          <td>Phone</td>
+          <td class="sign-up1">Số điện thoại</td>
           <td><input type="tel" name="txtPhone" pattern="0[0-9]{9}" required /></td>
         </tr>
         <tr>
-          <td>Email</td>
+          <td class="sign-up1">Email</td>
           <td><input type="email" name="txtEmail" required /></td>
         </tr>
         <tr>
           <td></td>
-          <td><input type="submit" value="SIGN-UP" /></td>
+          <td><input class="btn btn-success" type="submit" value="SIGN-UP" /></td>
         </tr>
       </table>
     </form>

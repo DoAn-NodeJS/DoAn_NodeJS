@@ -55,7 +55,7 @@ figure.caption-right {
     transform: translate(-50%, -50%);
     padding: 0px 20px 0px 20px;
     color: white;
-    background-color: orange;
+    background-color:#EA995F ;
     
 }
 
@@ -85,3 +85,44 @@ height: 25px;
       color: white;
   }
 
+.sign-up{
+    width: 400px;
+    height: 250px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px 20px 0px 20px;
+    color: white;
+    background-color: #EA995F ;
+}
+.sign-up1{
+    font-size: 20px;
+    color: white;
+}
+.admin-login{
+    width: 450px;
+    height: 200px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0px 20px 0px 20px;
+    color: white;
+    background-color: #EA995F ;
+}
+.admin-login1{
+    font-size: 30px;
+    color: white;
+}
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    margin: 0px auto;
+  }
