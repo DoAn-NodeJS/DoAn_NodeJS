@@ -65,15 +65,16 @@ figure.caption-right {
     border-radius: 25px;
 background:black;
 padding: 5px;
-width: 960px;
-height: 25px;
+width: 300px;
+height: 50px;
   }
 .brcart{
     background-color: orange;
         color: black;
     }
+
     .fontcart{
-        font-size: xx-large;
+        font-size:medium;
         color: black;
     }
   .Username{
@@ -85,6 +86,7 @@ height: 25px;
       color: white;
   }
 
+<<<<<<< HEAD
 .sign-up{
     width: 400px;
     height: 250px;
@@ -126,3 +128,26 @@ height: 25px;
     width: fit-content;
     margin: 0px auto;
   }
+=======
+  .rm{
+    background-color:darksalmon;
+    font-size: x-large;
+    color:black;
+  }
+  .rm:hover{
+      background-color: red;
+  }
+  .check-out{
+    background-color: goldenrod ;
+    font-size: x-large;
+  }
+  .check-out:hover{
+    background-color: red;
+  }
+ .text-left{
+    
+        text-align:end;
+    
+ }
+ 
+>>>>>>> 4e5da999e0a262f5c42b42233abdb32169e828a2
