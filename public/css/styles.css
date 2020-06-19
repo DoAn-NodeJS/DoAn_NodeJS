@@ -43,3 +43,11 @@ figure.caption-right {
 .text-center {
     text-align: center;
 }
+.brcart{
+    background-color: mediumpurple;
+        color: floralwhite;
+    }
+    .fontcart{
+        font-size: xx-large;
+        color: mintcream;
+    }
