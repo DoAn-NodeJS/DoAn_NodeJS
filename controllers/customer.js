@@ -183,4 +183,5 @@ router.get('/checkout', async function (req, res) {
     res.redirect('./login');
   }
 });
+
 module.exports = router;

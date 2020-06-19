@@ -43,11 +43,19 @@ figure.caption-right {
 .text-center {
     text-align: center;
 }
+.borderimg {
+    border-radius: 25px;
+background:black;
+padding: 5px;
+width: 960px;
+height: 25px;
+  }
 .brcart{
-    background-color: mediumpurple;
-        color: floralwhite;
+    background-color: orange;
+        color: black;
     }
     .fontcart{
         font-size: xx-large;
-        color: mintcream;
+        color: black;
     }
+  

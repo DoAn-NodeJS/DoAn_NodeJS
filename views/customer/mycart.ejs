@@ -8,37 +8,35 @@
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
   <div class="align-center">
-    <h2 class="text-center brcart">YOURT SHOPPING CART INFORMATION</h2>
+    <h2 class="borderimg text-center brcart ">YOURT SHOPPING CART INFORMATION</h2>
     <table class="datatable" border="1">
       <tr class="datatable">
         <th class="brcart fontcart">No.</th>
-        <th class="brcart fontcart" >ID</th>
         <th class="brcart fontcart" >Name</th>
         <th class="brcart fontcart" >Category</th>
-        <th class="brcart fontcart"  >Image</th>
-        <th class="brcart fontcart" >Price</th>
+        <th class="brcart fontcart" >Image</th>
+        <th class="brcart fontcart"  >Price</th>
         <th class="brcart fontcart" >Quantity</th>
         <th class="brcart fontcart" >Amount</th>
-        <th class="brcart fontcart"  >Action</th>
+        <th class="brcart fontcart" >Action</th>
       </tr>
       <%  for (var [i, item] of session.mycart.entries()) { %>
       <tr class="datatable">
         <td style="background-color:white;"><%=(i+1)%></td>
-        <th style="background-color:white;"><%=item.product._id%></th>
         <td style="background-color:white;"><%=item.product.name%></td>
         <td style="background-color:white;"><%=item.product.category.name%></td>
         <td><img src="data:image/jpg;base64,<%=item.product.image%>" width="200" height="200" /></td>
-        <td style="background-color:white;"><%=item.product.price%></td>
+        <td style="background-color:white;color: green;font-size: x-large;"><%=item.product.price%>$</td>
         <td style="background-color:white;"><%=item.quantity%></td>
-        <td style="background-color:white;"><%=item.product.price * item.quantity%></td>
-        <td style="background-color:white;font-size: xx-large;"><a href="./remove2cart?id=<%=item.product._id%>">Remove</a></td>
+        <td style="background-color:white;color: green;font-size: x-large;"><%=item.product.price * item.quantity%>$</td>
+        <td style="background-color:white;font-size: xx-large;color: red;"><a href="./remove2cart?id=<%=item.product._id%>">Remove</a></td>
       </tr>
       <%  } %>
       <tr>
-        <td colspan="6"></td>
-        <td class="brcart fontcart">Total</td>
-        <td class="brcart fontcart"><%=total%></td>
-        <td style="background-color:white;font-size: xx-large;"><a href="./checkout" onclick="return confirm('ARE YOU SURE?')">CHECKOUT</a></td>
+        <td colspan="5"></td>
+        <td class="brcart fontcart">Total:</td>
+        <td class="brcart fontcart"><%=total%>$</td>
+        <td style="background-color: goldenrod ;font-size: xx-large;"><a href="./checkout" onclick="return confirm('ARE YOU SURE?')">CHECKOUT</a></td>
       </tr>
     </table>
   </div>
