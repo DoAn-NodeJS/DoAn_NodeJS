@@ -18,3 +18,4 @@ app.set('view engine', 'ejs');
 app.use('/', require('./controllers/customer.js'));
 app.use('/admin', require('./controllers/admin.js'));
 
+//test
