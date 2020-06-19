@@ -43,6 +43,7 @@ figure.caption-right {
 .text-center {
     text-align: center;
 }
+<<<<<<< HEAD
 .login-customers {
     width: 300px;
     height: 300px;
@@ -73,3 +74,21 @@ h2{
 button:hover{
     font-size: 15px;
 }
+=======
+.borderimg {
+    border-radius: 25px;
+background:black;
+padding: 5px;
+width: 960px;
+height: 25px;
+  }
+.brcart{
+    background-color: orange;
+        color: black;
+    }
+    .fontcart{
+        font-size: xx-large;
+        color: black;
+    }
+  
+>>>>>>> ffdd5434ea3730303025db8df1ff19bba9f36373
