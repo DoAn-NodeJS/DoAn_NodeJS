@@ -3,46 +3,34 @@
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <style>
-    body{
-      background-image: url("https://previews.123rf.com/images/vectomart/vectomart1210/vectomart121000059/15803400-illustration-of-different-shopping-bag-on-sale-background.jpg")
-    }
-  </style>
 </head>
 
 <body class="customer">
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
-  <div class="align-center">
-    <h2 class=" text-center  ">Thông tin giỏ hàng </h2>
+  <div>
+    <h4 style="text-align: left;">Thông tin giỏ hàng&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Đơn Giá </h4>
     <table class="datatable" border="2">
       <tr class="datatable">
-        <th class="brcart fontcart  ">STT.</th>
-        <th class="brcart fontcart" >Tên</th>
-        <th class="brcart fontcart" >Danh mục</th>
-        <th class="brcart fontcart" >Ảnh</th>
-        <th class="brcart fontcart"  >Đơn Giá</th>
-        <th class="brcart fontcart" >Số lượng</th>
-        <th class="brcart fontcart" >Tổng</th>
-        <th class="brcart fontcart" >Chức năng</th>
       </tr>
       <%  for (var [i, item] of session.mycart.entries()) { %>
       <tr class="datatable">
-        <td style="background-color:white;"><%=(i+1)%></td>
-        <td style="background-color:white;"><%=item.product.name%></td>
-        <td style="background-color:white;"><%=item.product.category.name%></td>
-        <td><img src="data:image/jpg;base64,<%=item.product.image%>" width="100" height="100" /></td>
-        <td style="background-color:darkgray;color: green;font-size: x-large;"><%=item.product.price%>$</td>
-        <td style="background-color:white;"><%=item.quantity%></td>
-        <td style="background-color:darkgray;color: green;font-size: x-large;"><%=item.product.price * item.quantity%>$</td>
-        <td class="rm "> <a href="./remove2cart?id=<%=item.product._id%>">Xóa Sản Phẩm</a></td>
+        <h1></h1>
+        <h1 class="borderimg"></h1>
+        <h6 style="background-color:white;color: brown;">Tên sản phẩm: <%=item.product.name%></h6>
+        <a><img src="data:image/jpg;base64,<%=item.product.image%>" width="80" height="80" /></a>
+        <a style="background-color:white;">&ensp;SỐ lượng :  <%=item.quantity%>&ensp;&ensp;&ensp;</a>
+        <a class="rm"> <a href="./remove2cart?id=<%=item.product._id%>">Xóa Sản Phẩm</a></a>
+        <a style="background-color:white;color: green;font-size: x-large;">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<%=item.product.price%>$</a>
+        
       </tr>
       <%  } %>
       <tr>
-        <td colspan="5"></td>
-        <td class="brcart fontcart">Hóa Đơn:</td>
-        <td class="brcart fontcart"><%=total%>$</td>
-        <td class="check-out "><a href="./checkout" onclick="return confirm('ARE YOU SURE?')">Thanh Toán</a></td>
+        <h4 style="font-size: xx-large; position:absolute; left:720px; top:129px;" class="vuong"></h4>
+        <h1 style="font-size: x-large; position:absolute; left:750px; top:150px;">Tổng Hóa Đơn:</h1>
+        <h1 style="font-size: x-large; position:absolute; left:920px; top:150px;" class="brcart fontcart"><%=total%>$</h1>
+        <h1 style="font-size: medium; position:absolute; left:820px; top:190px;" class="check-out btn btn-warning "><a href="./checkout" onclick="return confirm('ARE YOU SURE?')">Thanh Toán</a></h1>
       </tr>
     </table>
   </div>

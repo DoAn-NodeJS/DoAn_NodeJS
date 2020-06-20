@@ -5,7 +5,7 @@ body.customer {
     width: 1150px;
     height: fit-content;
     margin: 0px auto;
-     /*border: 1px solid black; */
+     /* border: 1px solid black; */
 }
 
 body.admin {
@@ -20,6 +20,9 @@ div.inline {
     display: inline-block;
     /* border: 1px solid black; */
 }
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  }
 
 figure.caption-right {
     display: flex;
@@ -62,13 +65,24 @@ figure.caption-right {
     background-color:#EA995F ;
     
 }
+<<<<<<< HEAD
+=======
+.vuong {
+    border-radius: 25px;
+background:silver;
+padding: 2px;
+width: 300px;
+height: 140px;
+  }
+
+>>>>>>> d9c55b0982ba3eb03dc9f80490560cf777abff99
 
 .borderimg {
     border-radius: 25px;
 background:black;
-padding: 5px;
-width: 300px;
-height: 50px;
+padding: 2px;
+width: 600px;
+height: 2px;
   }
 .brcart{
     background-color: orange;
@@ -132,20 +146,11 @@ height: 50px;
   }
 
   .rm{
-    background-color:darksalmon;
+    background-color:white;
     font-size: x-large;
     color:black;
   }
-  .rm:hover{
-      background-color: red;
-  }
-  .check-out{
-    background-color: goldenrod ;
-    font-size: x-large;
-  }
-  .check-out:hover{
-    background-color: red;
-  }
+  
  .text-left{
     
         text-align:end;

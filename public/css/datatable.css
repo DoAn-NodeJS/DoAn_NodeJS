@@ -7,6 +7,10 @@
   margin-right:auto;
   
 }
+.datatable2 {
+  text-align: center;
+  border-collapse: collapse;
+}
 /* header */
 tr:first-child.datatable {
   background-color: #ffcc00;

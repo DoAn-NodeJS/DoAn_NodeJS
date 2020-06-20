@@ -84,7 +84,7 @@ router.post('/login', async function (req, res) {
   var customer = await CustomerDAO.selectByUsernameAndPassword(username, password);
   if (customer && customer.active == 1) {
     req.session.customer = customer;
-    res.redirect('./home');
+    MyUtil.showAlertAndRedirect(res, 'Đăng Nhập Thành Công!', './home');
   } else {
     MyUtil.showAlertAndRedirect(res, 'THẤT BẠI', './login');
   }
