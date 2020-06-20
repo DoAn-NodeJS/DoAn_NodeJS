@@ -25,10 +25,17 @@ body {
 
 .header {
   background-color: #f1f1f1;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
   font-family: "Sofia";
   font-size: 22px;
+  background-image: url("https://previews.123rf.com/images/magenta10/magenta101508/magenta10150800024/43943845-vintage-background-with-paper-border-lines-divider-header-ornamental-frame-template.jpg");
+  background-position: 0% 0%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: right top;
+   background-origin: content-box;
+   background-clip: padding-box;
 }
 
 ul.menu {
@@ -138,4 +145,9 @@ img {
 .font {
   font-family: "Sofia";
   font-size: 20px;
+}
+#borderimg { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url("./images/border.png") 30 stretch;
 }

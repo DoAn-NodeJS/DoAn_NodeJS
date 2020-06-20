@@ -1,9 +1,9 @@
 <head>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
-<div class="header" id="grad1" >
+<div class="header" >
     <h2>Admin Page</h2>
-    <p>Chi tiết</p>
+    <p >Chi tiết</p>
   </div>
 <div  class="border-bottom">
   <div class="float-left">
@@ -15,10 +15,11 @@
       <li class="menu"><a href="./listcustomer">Customer</a></li>
     </ul>
   </div>
-  <div class="float-right"> <font class="font">Hello</font>
-   <button class="button button2"><b><%=session.admin.username%></b></button>
-  <button class="button button2"><a href="./logout"></a>Logout</button>
-    <!-- Hello <b></b> | <a href="./logout">Logout</a> -->
+  
+   
+  <!-- <button class="button button2"><a href="./logout"></a>Logout</button> -->  
+    <div class="float-right"> <font class="font">Hello</font> 
+   <button class="button button2"><b><%=session.admin.username%></b></button> <a class="button button2" href="./logout">Logout</a>
   </div>
   <div class="float-clear"></div>
 </div>
