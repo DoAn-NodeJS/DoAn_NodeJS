@@ -1,7 +1,94 @@
-<div class="border-bottom">
+<head>
+  <style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: rgb(235, 101, 12);
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#grad1 {
+  height: 200px;
+  background-color: red; 
+  background-image: linear-gradient(red, yellow); 
+}
+
+.button {
+  background-color: #d46012; 
+  border: none;
+  color: white;
+  padding: 15px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
+.button2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 40px 0 rgba(0,0,0,0.19);
+  border-radius: 20px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+  </style>
+  </head>
+  <div class="header" id="grad1" >
+    <h2>Admin Page</h2>
+    <p>Chi tiết</p>
+  </div>
+<div  class="border-bottom">
   <div class="float-left">
-    <ul class="menu">
-      <li class="menu"><a href="./home">Home</a></li>
+    <ul class="menu" >
+      <li class="menu" ><a class="active" href="./home">Home</a></li>
       <li class="menu"><a href="./listcategory">Category</a></li>
       <li class="menu"><a href="./listproduct">Product</a></li>
       <li class="menu"><a href="./listorder">Order</a></li>
@@ -9,7 +96,9 @@
     </ul>
   </div>
   <div class="float-right">
-    Hello <b><%=session.admin.username%></b> | <a href="./logout">Logout</a>
+    <button class="button button2"><b><%=session.admin.username%></b></button>
+    <button class="button button2"><a href="./logout"></a>Logout</button>
+    <!-- Hello <b></b> | <a href="./logout">Logout</a> -->
   </div>
   <div class="float-clear"></div>
 </div>
