@@ -9,8 +9,8 @@ body.customer {
 }
 
 body.admin {
-    width: fit-content;
-    height: fit-content;
+    /* width: fit-content;
+    height: fit-content; */
     margin: 0px auto;
     /* border: 1px solid black; */
     
