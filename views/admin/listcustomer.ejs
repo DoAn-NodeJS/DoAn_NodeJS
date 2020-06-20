@@ -12,12 +12,12 @@
     <table class="datatable" border="1">
       <tr class="datatable">
         <th>ID</th>
-        <th>Username</th>
-        <th>Password</th>
-        <th>Name</th>
-        <th>Phone</th>
+        <th>Tên đăng nhập</th>
+        <th>Mật khẩu</th>
+        <th>Tên</th>
+        <th>Số điện thoại</th>
         <th>Email</th>
-        <th>Active</th>
+        <th>Trạng thái</th>
         <th>Action</th>
       </tr>
       <%  for (var item of custs) { %>
@@ -31,9 +31,9 @@
         <td><%=item.active%></td>
         <td>
           <% if (item.active == 0) { %>
-          <a href="./sendmail?id=<%=item._id%>">EMAIL</a>
+          <a href="./sendmail?id=<%=item._id%>">Kích hoạt</a>
           <% } else if (item.active == 1) { %>
-          <a href="./deactive?id=<%=item._id%>&token=<%=item.token%>" onclick="return confirm('ARE YOU SURE?')">DEACTIVE</a>
+          <a href="./deactive?id=<%=item._id%>&token=<%=item.token%>" onclick="return confirm('Xóa Kích Hoạt !!!')">Xóa kích hoạt</a>
           <% } %>
         </td>
       </tr>

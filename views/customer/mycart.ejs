@@ -2,43 +2,47 @@
 
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+    body{
+      background-image: url("https://previews.123rf.com/images/vectomart/vectomart1210/vectomart121000059/15803400-illustration-of-different-shopping-bag-on-sale-background.jpg")
+    }
+  </style>
 </head>
 
 <body class="customer">
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
   <div class="align-center">
-    <h2 class="text-center">ITEM LIST</h2>
-    <table class="datatable" border="1">
+    <h2 class=" text-center  ">Thông tin giỏ hàng </h2>
+    <table class="datatable" border="2">
       <tr class="datatable">
-        <th>No.</th>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Category</th>
-        <th>Image</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Amount</th>
-        <th>Action</th>
+        <th class="brcart fontcart  ">STT.</th>
+        <th class="brcart fontcart" >Tên</th>
+        <th class="brcart fontcart" >Danh mục</th>
+        <th class="brcart fontcart" >Ảnh</th>
+        <th class="brcart fontcart"  >Đơn Giá</th>
+        <th class="brcart fontcart" >Số lượng</th>
+        <th class="brcart fontcart" >Tổng</th>
+        <th class="brcart fontcart" >Chức năng</th>
       </tr>
       <%  for (var [i, item] of session.mycart.entries()) { %>
       <tr class="datatable">
-        <td><%=(i+1)%></td>
-        <th><%=item.product._id%></th>
-        <td><%=item.product.name%></td>
-        <td><%=item.product.category.name%></td>
-        <td><img src="data:image/jpg;base64,<%=item.product.image%>" width="70" height="70" /></td>
-        <td><%=item.product.price%></td>
-        <td><%=item.quantity%></td>
-        <td><%=item.product.price * item.quantity%></td>
-        <td><a href="./remove2cart?id=<%=item.product._id%>">Remove</a></td>
+        <td style="background-color:white;"><%=(i+1)%></td>
+        <td style="background-color:white;"><%=item.product.name%></td>
+        <td style="background-color:white;"><%=item.product.category.name%></td>
+        <td><img src="data:image/jpg;base64,<%=item.product.image%>" width="100" height="100" /></td>
+        <td style="background-color:darkgray;color: green;font-size: x-large;"><%=item.product.price%>$</td>
+        <td style="background-color:white;"><%=item.quantity%></td>
+        <td style="background-color:darkgray;color: green;font-size: x-large;"><%=item.product.price * item.quantity%>$</td>
+        <td class="rm "> <a href="./remove2cart?id=<%=item.product._id%>">Xóa Sản Phẩm</a></td>
       </tr>
       <%  } %>
       <tr>
-        <td colspan="6"></td>
-        <td>Total</td>
-        <td><%=total%></td>
-        <td><a href="./checkout" onclick="return confirm('ARE YOU SURE?')">CHECKOUT</a></td>
+        <td colspan="5"></td>
+        <td class="brcart fontcart">Hóa Đơn:</td>
+        <td class="brcart fontcart"><%=total%>$</td>
+        <td class="check-out "><a href="./checkout" onclick="return confirm('ARE YOU SURE?')">Thanh Toán</a></td>
       </tr>
     </table>
   </div>
