@@ -35,7 +35,7 @@ router.post('/login', async function (req, res) {
     req.session.admin = admin;
     res.redirect('./home');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './login');
+    MyUtil.showAlertAndRedirect(res, 'Vui Lòng Đăng Nhập Lại!', './login');
   }
 });
 router.get('/logout', function (req, res) {
@@ -52,9 +52,9 @@ router.post('/addcategory', async function (req, res) {
   var category = { name: name };
   var result = await CategoryDAO.insert(category);
   if (result) {
-    MyUtil.showAlertAndRedirect(res, 'OK BABY!', './listcategory');
+    MyUtil.showAlertAndRedirect(res, 'Thành Công!', './listcategory');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './listcategory');
+    MyUtil.showAlertAndRedirect(res, 'Thất Bại!', './listcategory');
   }
 });
 router.post('/updatecategory', async function (req, res) {
@@ -63,18 +63,18 @@ router.post('/updatecategory', async function (req, res) {
   var category = { _id: _id, name: name };
   var result = await CategoryDAO.update(category);
   if (result) {
-    MyUtil.showAlertAndRedirect(res, 'OK BABY!', './listcategory');
+    MyUtil.showAlertAndRedirect(res, 'Thành Công!', './listcategory');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './listcategory');
+    MyUtil.showAlertAndRedirect(res, 'Thất Bại!', './listcategory');
   }
 });
 router.post('/deletecategory', async function (req, res) {
   var _id = req.body.txtID;
   var result = await CategoryDAO.delete(_id);
   if (result) {
-    MyUtil.showAlertAndRedirect(res, 'OK BABY!', './listcategory');
+    MyUtil.showAlertAndRedirect(res, 'Thành Công!', './listcategory');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './listcategory');
+    MyUtil.showAlertAndRedirect(res, 'Thất Bại!', './listcategory');
   }
 });
 // product
@@ -102,9 +102,9 @@ router.post('/addproduct', upload.single('fileImage'), async function (req, res)
     var category = await CategoryDAO.selectByID(catID);
     var product = { name: name, price: price, image: image, cdate: now, category: category };
     var result = await ProductDAO.insert(product);
-    if (result) MyUtil.showAlertAndRedirect(res, 'OK BABY!', './listproduct');
+    if (result) MyUtil.showAlertAndRedirect(res, 'Thành Công!', './listproduct');
   }
-  MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './listproduct');
+  MyUtil.showAlertAndRedirect(res, 'Thất Bại!', './listproduct');
 });
 router.post('/updateproduct', upload.single('fileImage'), async function (req, res) {
   var _id = req.body.txtID;
@@ -122,18 +122,18 @@ router.post('/updateproduct', upload.single('fileImage'), async function (req, r
   var product = { _id: _id, name: name, price: price, image: image, cdate: now, category: category };
   var result = await ProductDAO.update(product);
   if (result) {
-    MyUtil.showAlertAndRedirect(res, 'OK BABY!', './listproduct');
+    MyUtil.showAlertAndRedirect(res, 'Thành Công!', './listproduct');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './listproduct');
+    MyUtil.showAlertAndRedirect(res, 'Thất Bại!', './listproduct');
   }
 });
 router.post('/deleteproduct', upload.single('fileImage'), async function (req, res) {
   var _id = req.body.txtID;
   var result = await ProductDAO.delete(_id);
   if (result) {
-    MyUtil.showAlertAndRedirect(res, 'OK BABY!', './listproduct');
+    MyUtil.showAlertAndRedirect(res, 'Thành Công!', './listproduct');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './listproduct');
+    MyUtil.showAlertAndRedirect(res, 'Thất Bại!', './listproduct');
   }
 });
 // order
@@ -183,9 +183,9 @@ router.get('/deactive', async function (req, res) {
   var token = req.query.token;
   var result = await CustomerDAO.active(_id, token, 0);
   if (result) {
-    MyUtil.showAlertAndRedirect(res, 'OK BABY!', './listcustomer');
+    MyUtil.showAlertAndRedirect(res, 'Thành Công!', './listcustomer');
   } else {
-    MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './listcustomer');
+    MyUtil.showAlertAndRedirect(res, 'Thất Bại!', './listcustomer');
   }
 });
 module.exports = router;
