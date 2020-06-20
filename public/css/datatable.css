@@ -2,6 +2,10 @@
   text-align: center;
   border-collapse: collapse;
 }
+.datatable2 {
+  text-align: center;
+  border-collapse: collapse;
+}
 /* header */
 tr:first-child.datatable {
   background-color: #ffcc00;

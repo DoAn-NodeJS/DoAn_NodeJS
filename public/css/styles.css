@@ -20,6 +20,9 @@ div.inline {
     display: inline-block;
     /* border: 1px solid black; */
 }
+.rainbow-text {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+  }
 
 figure.caption-right {
     display: flex;

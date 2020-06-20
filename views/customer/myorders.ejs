@@ -2,6 +2,11 @@
 
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+  <style>
+    body{
+      background-image: url(https://www.terraremota.com/wp-content/uploads/2016/06/stock-photo-art-concrete-texture-for-background-in-black-grey-and-white-colors-298514801-1.jpg);
+    }
+  </style>
 </head>
 
 <body class="customer">
@@ -10,23 +15,25 @@
   <%  if (orders) { %>
   <div class="align-center">
     <h2 class="text-center">ORDER LIST</h2>
-    <table class="datatable" border="1">
-      <tr class="datatable">
-        <th>ID</th>
-        <th>Creation date</th>
-        <th>Cust.name</th>
-        <th>Cust.phone</th>
-        <th>Total</th>
-        <th>Status</th>
+    <table class="datatable2" border="1">
+      <tr class="datatable2">
+        <th style="background-color:whitesmoke;">ID</th>
+        <th style="background-color:whitesmoke;">Creation date</th>
+        <th style="background-color:whitesmoke;">Cust.name</th>
+        <th style="background-color:whitesmoke;">Cust.phone</th>
+        <th style="background-color:whitesmoke;">Total</th>
+        <th style="background-color:whitesmoke;">Status</th>
+        <h1></h1>
       </tr>
+      
       <%  for (var item of orders) { %>
-      <tr class="datatable" onclick="window.location='./myorders?id=<%=item._id%>'">
-        <th><%=item._id%></th>
-        <td><%=new Date(item.cdate).toLocaleString()%></td>
-        <td><%=item.customer.name%></td>
-        <td><%=item.customer.phone%></td>
-        <td><%=item.total%></td>
-        <td><%=item.status%></td>
+      <tr class="datatable" onclick="window.location='./myorders?id=<%=item._id%>' ">
+        <th style="background-color:white;"><%=item._id%></th>
+        <td style="background-color:white;"><%=new Date(item.cdate).toLocaleString()%></td>
+        <td style="background-color:white;"><%=item.customer.name%></td>
+        <td style="background-color:white;"><%=item.customer.phone%></td>
+        <td style="background-color:white;"><%=item.total%></td>
+        <td style="background-color:white;"><%=item.status%></td>
       </tr>
       <%  } %>
     </table>
@@ -37,23 +44,17 @@
     <h2 class="text-center">ORDER DETAIL</h2>
     <table class="datatable" border="1">
       <tr class="datatable">
-        <th>No.</th>
-        <th>Prod.ID</th>
-        <th>Prod.name</th>
-        <th>Image</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Amount</th>
       </tr>
       <%  for (var [i, item] of order.items.entries()) {  %>
       <tr class="datatable">
-        <td><%=(i+1)%></td>
-        <td><%=item.product._id%></td>
-        <td><%=item.product.name%></td>
-        <td><img src="data:image/jpg;base64,<%=item.product.image%>" width="70" height="70" /></td>
-        <td><%=item.product.price%></td>
-        <td><%=item.quantity%></td>
-        <td><%=item.product.price * item.quantity%></td>
+        <h1 class="borderimg"></h1>
+        <a>ID : <%=item.product._id%>&ensp;&ensp;&ensp;</a>
+        <a>TÊN : <%=item.product.name%>&ensp;&ensp;&ensp;</a>
+        <a>SỐ LƯỢNG : <%=item.quantity%>&ensp;&ensp;&ensp;</a>
+        <a>ĐƠN GIÁ : <%=item.product.price%>$</a>
+        <h1></h1>
+        <a><img src="data:image/jpg;base64,<%=item.product.image%>" width="50" height="50" /></a>
+        <a style="font-size: xx-large;" class="rainbow-text">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;TỔNG : <%=item.product.price * item.quantity%>$</a>
       </tr>
       <%  } %>
     </table>
