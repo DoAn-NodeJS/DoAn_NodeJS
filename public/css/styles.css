@@ -1,8 +1,14 @@
 @import url("./menu.css");
 @import url("./datatable.css");
 
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 body.customer {
-    width: 1150px;
+    /* width: 1150px; */
     height: fit-content;
     margin: 0px auto;
      /* border: 1px solid black; */
@@ -78,24 +84,11 @@ background-color:whitesmoke;
 padding: 190px;
 padding-bottom: 110px;
   }
-  .vuong3 {  
-    border-radius: 25px;
-    background-color:whitesmoke;
-    padding: 450px;
-    padding-bottom: 250px;
-      }
 .borderimg {
     border-radius: 25px;
 background:black;
 padding: 2px;
 width: 700px;
-height: 2px;
-  }
-  .borderimg3 {
-    border-radius: 25px;
-background:black;
-padding: 1px;
-width: 800px;
 height: 2px;
   }
   .borderimg2 {
@@ -209,3 +202,6 @@ height: 2px;
     background-color: #f2f2f2;
     padding: 20px;
   } */
+  .text-signup{
+    color: white;
+  }
