@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <!-- <link href="/css/styles.css" type="text/css" rel="stylesheet" /> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+
+
+
+<body class="customer">
+  <%- include('./_menu.ejs') %>
+  <%- include('./_inform.ejs') %>
+  <div>
+    <h4 style="text-align: left;">Thông tin giỏ hàng&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+      &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Đơn Giá </h4>
+    <table class="datatable" border="2">
+      <tr class="datatable">
+      </tr>
+      <%  for (var [i, item] of session.mycart.entries()) { %>
+      <tr class="datatable">
+        <h1></h1>
+        <h1 class="borderimg2"></h1>
+        <h6 style="background-color:white;color: brown;">Tên sản phẩm: <%=item.product.name%></h6>
+        <a><img src="data:image/jpg;base64,<%=item.product.image%>" width="80" height="80" /></a>
+        <a style="background-color:white;">&ensp;SỐ lượng :  <%=item.quantity%>&ensp;&ensp;&ensp;</a>
+        <a class="rm"> <a href="./remove2cart?id=<%=item.product._id%>">Xóa Sản Phẩm</a></a>
+        <a style="background-color:white;color: green;font-size: x-large;">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;<%=item.product.price%>$</a>
+        
+      </tr>
+      <%  } %>
+      <tr>
+        <h4 style="font-size: xx-large; position:absolute; left:720px; top:129px;" class="vuong"></h4>
+        <h1 style="font-size: x-large; position:absolute; left:750px; top:150px;">Tổng Hóa Đơn:</h1>
+        <h1 style="font-size: x-large; position:absolute; left:920px; top:150px;" class="brcart fontcart"><%=total%>$</h1>
+        <h1 style="font-size: medium; position:absolute; left:820px; top:190px;" class="check-out btn btn-warning "><a href="./checkout" onclick="return confirm('ARE YOU SURE?')">Thanh Toán</a></h1>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+  <style>
+    body{
+      background-image: url(https://data.whicdn.com/images/269842832/original.gif);
+    }
+  </style>
+</head>
+
+<body class="customer">
+  <%- include('./_menu.ejs') %>
+  <%- include('./_inform.ejs') %>
+  <%  if (orders) { %>
+  <div class="align-center">
+    <h2 class="text-center">Lịch sử đặt hàng</h2>
+    <table class="datatable2" border="1">
+      <tr class="datatable2">
+        <th style="background-color:whitesmoke;">Ngày lập đơn</th>
+        <th style="background-color:whitesmoke;">Tên khách hàng</th>
+        <th style="background-color:whitesmoke;">Số điện thoại</th>
+        <th style="background-color:whitesmoke;">Tổng hóa đơn</th>
+        <th style="background-color:whitesmoke;">Tình trạng</th>
+        <h1></h1>
+      </tr>
+      
+      <%  for (var item of orders) { %>
+      <tr class="datatable" onclick="window.location='./myorders?id=<%=item._id%>' ">
+        <td style="background-color:white;"><%=new Date(item.cdate).toLocaleString()%></td>
+        <td style="background-color:white;"><%=item.customer.name%></td>
+        <td style="background-color:white;"><%=item.customer.phone%></td>
+        <td style="background-color:white;"><%=item.total%></td>
+        <td style="background-color:white;"><%=item.status%></td>
+      </tr>
+      <%  } %>
+    </table>
+  </div>
+  <%  } %>
+  <%  if (order) { %>
+  <div class="align-center">
+    <h2 class="text-center">Chi tiết đơn hàng </h2>
+    <table class="datatable" border="1">
+      <tr class="datatable">
+      </tr>
+      <%  for (var [i, item] of order.items.entries()) {  %>
+      <tr class="datatable">
+        <h1 class="borderimg"></h1>
+        <a>ID SẢN PHẨM : <%=item.product._id%>&ensp;&ensp;&ensp;</a>
+        <a>TÊN : <%=item.product.name%>&ensp;&ensp;&ensp;</a>
+        <a>SỐ LƯỢNG : <%=item.quantity%>&ensp;&ensp;&ensp;</a>
+        <a>ĐƠN GIÁ : <%=item.product.price%>$</a>
+        <h1></h1>
+        <a><img src="data:image/jpg;base64,<%=item.product.image%>" width="50" height="50" /></a>
+        <a style="font-size: xx-large;">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;TỔNG: <%=item.product.price * item.quantity%>$</a>
+      </tr>
+      <%  } %>
+    </table>
+  </div>
+  <%  } %>
+</body>
+
+</html>
