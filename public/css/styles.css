@@ -74,10 +74,18 @@ height: 140px;
   }
   .vuong2 {  
 border-radius: 25px;
-background-color: white;
-padding: 200px;
+background-color:whitesmoke;
+padding: 190px;
+padding-bottom: 110px;
   }
 .borderimg {
+    border-radius: 25px;
+background:black;
+padding: 2px;
+width: 700px;
+height: 2px;
+  }
+  .borderimg2 {
     border-radius: 25px;
 background:black;
 padding: 2px;
