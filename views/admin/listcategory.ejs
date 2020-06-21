@@ -24,7 +24,7 @@
 <body class="container">
   <%- include('./_menu.ejs') %>
   <div class="row">
-    <div class="col">
+    <div class="col border m-3 p-3">
         <h2 class="text-center">CATEGORY LIST</h2>
         <table class="datatable" border="1">
           <tr class="datatable">
@@ -39,7 +39,7 @@
           <%  } %>
         </table>
       </div>
-    <div class="col align-center">
+    <div class="col align-center border m-3 p-3">
         <h2 class="text-center">CATEGORY DETAIL</h2>
         <form method="POST" class="align-center">
           <table>
@@ -53,7 +53,6 @@
               </td>
             </tr>
             <tr>
-              <td></td>
               <td>
                 <input type="submit" formaction="./addcategory" value="ADD NEW" />
                 <input type="submit" formaction="./updatecategory" value="UPDATE" id="btnUpdate" style="display: none" />
