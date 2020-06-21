@@ -53,11 +53,11 @@ figure.caption-right {
 
 .login-customers {
     width: 500px;
-    height: 200px;
+    height: 250px;
     border: 1px solid grey;
     border-radius: 10px;
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0px 20px 0px 20px;
