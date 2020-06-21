@@ -57,7 +57,7 @@ figure.caption-right {
     border: 1px solid grey;
     border-radius: 10px;
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0px 20px 0px 20px;
@@ -74,10 +74,18 @@ height: 140px;
   }
   .vuong2 {  
 border-radius: 25px;
-background-color: white;
-padding: 200px;
+background-color:whitesmoke;
+padding: 190px;
+padding-bottom: 110px;
   }
 .borderimg {
+    border-radius: 25px;
+background:black;
+padding: 2px;
+width: 700px;
+height: 2px;
+  }
+  .borderimg2 {
     border-radius: 25px;
 background:black;
 padding: 2px;
@@ -105,11 +113,11 @@ height: 2px;
 
 .sign-up{
     width: 400px;
-    height: 250px;
+    height: 340px;
     border: 1px solid grey;
     border-radius: 10px;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0px 20px 0px 20px;
