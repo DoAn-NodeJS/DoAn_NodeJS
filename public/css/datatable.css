@@ -6,9 +6,38 @@
   margin-right:auto;
   
 }
+.datatablee {
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+  border: tomato; 
+  margin-left: 270px; 
+  margin-right:auto;
+  
+}
+.datatableo {
+  border-collapse: collapse;
+  width: 50%;
+  border: tomato; 
+  margin-left: 720px; 
+  margin-right:auto; 
+}
+
 .datatable2 {
   text-align: center;
   border-collapse: collapse;
+}
+.datatableb {
+  width: 50%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.datatablec {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: 20px; 
+  margin-right:auto;
 }
 /* header */
 tr:first-child.datatable {

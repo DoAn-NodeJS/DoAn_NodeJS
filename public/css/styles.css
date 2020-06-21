@@ -53,11 +53,11 @@ figure.caption-right {
 
 .login-customers {
     width: 500px;
-    height: 200px;
+    height: 250px;
     border: 1px solid grey;
     border-radius: 10px;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0px 20px 0px 20px;
@@ -65,8 +65,6 @@ figure.caption-right {
     background-color:#EA995F ;
     
 }
-<<<<<<< HEAD
-=======
 .vuong {
     border-radius: 25px;
 background:silver;
@@ -74,10 +72,33 @@ padding: 2px;
 width: 300px;
 height: 140px;
   }
-
->>>>>>> d9c55b0982ba3eb03dc9f80490560cf777abff99
-
+  .vuong2 {  
+border-radius: 25px;
+background-color:whitesmoke;
+padding: 190px;
+padding-bottom: 110px;
+  }
+  .vuong3 {  
+    border-radius: 25px;
+    background-color:whitesmoke;
+    padding: 450px;
+    padding-bottom: 250px;
+      }
 .borderimg {
+    border-radius: 25px;
+background:black;
+padding: 2px;
+width: 700px;
+height: 2px;
+  }
+  .borderimg3 {
+    border-radius: 25px;
+background:black;
+padding: 1px;
+width: 800px;
+height: 2px;
+  }
+  .borderimg2 {
     border-radius: 25px;
 background:black;
 padding: 2px;
@@ -105,11 +126,11 @@ height: 2px;
 
 .sign-up{
     width: 400px;
-    height: 250px;
+    height: 340px;
     border: 1px solid grey;
     border-radius: 10px;
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 0px 20px 0px 20px;
