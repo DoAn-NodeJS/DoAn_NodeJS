@@ -1,7 +1,7 @@
-PORT = 5000
-HOST = '127.0.0.1'
+const HOST = '127.0.0.1'
+const PORT = '5000'
 
-module.exports = {
-    PORT,
-    HOST
+export {
+    HOST,
+    PORT
 }
