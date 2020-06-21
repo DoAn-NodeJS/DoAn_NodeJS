@@ -1,7 +1,13 @@
 //CLI: npm install express ejs body-parser express-session --save
+
+var constants = require('./constants/Constants')
+const HOST = constants.HOST
+const PORT = constants.PORT 
 var express = require('express');
 var app = express();
-app.listen(process.env.PORT || 3000);
+app.listen(PORT,HOST, function () {
+  console.log(`Server running at http://${HOST}:${PORT}/`);
+});
 // middlewares
 app.use(express.static('public'));
 var bodyParser = require('body-parser');
