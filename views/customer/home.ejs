@@ -2,35 +2,79 @@
 
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 
-<body class="customer">
+<body class="container">
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
-  <div class="align-center">
-    <h2 class="text-center">Sản phẩm mới</h2>
+  <p class="h2 text-center">Sản phẩm mới</p>
+  <div class="container-fluid ">
+    
+  
+  <div class="card-deck align-self-center">
+    <div class="row mx-auto justify-content-center">
     <%  for (var prod of newprods) { %>
-    <div class="inline">
-      <figure>
-        <a href="./details?id=<%=prod._id%>"><img src="data:image/jpg;base64,<%=prod.image%>" width="200px" height="200px" /></a>
-        <figcaption class="text-center"><%=prod.name%><br />Price: <%=prod.price%></figcaption>
-      </figure>
+      <div class="col-md-3 col-sm-6 border m-3 p-3 rounded">
+        <div class="product-grid">
+            <div class="product-image">
+              <a href="./details?id=<%=prod._id%>"><img src="data:image/jpg;base64,<%=prod.image%>" width="200px"
+                height="200px" /></a>
+            </div>
+            <div class="product-content">
+                <h3 class="title"><a href="#"><%=prod.name%></a></h3>
+                <div class="price">
+                  <%=prod.price%>.000 đồng
+                </div>
+                <form action="./addSingleToCart" method="POST">
+                  <input type="hidden" name="txtID" value="<%=prod._id%>" /></td>
+                  <input class="btn btn-primary" type="submit" value="Thêm sản phẩm" /></td>
+                </form>
+            </div>
+        </div>
     </div>
+      <!-- <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-img-bottom">
+          <a href="./details?id=<%=prod._id%>"><img src="data:image/jpg;base64,<%=prod.image%>" width="200px"
+              height="200px" /></a>
+        </div>
+        <h4 class="card-title"><%=prod.name%></h4>
+        <p class="card-text"></p>
+        <a href="#" class="btn btn-primary">Thêm sản phẩm</a>
+      </div>
+    </div>
+  </div> -->
     <%  } %>
   </div>
-  <%  if (hotprods) { %>
+  </div>
+</div>
+  <!-- <%  if (hotprods) { %>
   <div class="align-center">
     <h2 class="text-center">Sản phẩm bán chạy nhất</h2>
     <%  for (var prod of hotprods) { %>
     <div class="inline">
       <figure>
-        <a href="./details?id=<%=prod._id%>"><img src="data:image/jpg;base64,<%=prod.image%>" width="200px" height="200px" /></a>
+        <a href="./details?id=<%=prod._id%>"><img src="data:image/jpg;base64,<%=prod.image%>" width="200px"
+            height="200px" /></a>
         <figcaption class="text-center"><%=prod.name%><br />Price: <%=prod.price%></figcaption>
       </figure>
     </div>
     <%  } %>
   </div>
-  <%  } %>
+  <%  } %> -->
 </body>
 
 </html>

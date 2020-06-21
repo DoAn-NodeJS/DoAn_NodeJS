@@ -13,7 +13,7 @@ var OrderDAO = require(pathDAO + "/OrderDAO.js");
 // routes
 router.get(['/', '/home'], async function (req, res) {
   var categories = await CategoryDAO.selectAll();
-  var newproducts = await ProductDAO.selectTopNew(3);
+  var newproducts = await ProductDAO.selectAll();
   var hotproducts = await ProductDAO.selectTopHot(3);
   res.render('../views/customer/home.ejs', { cats: categories, newprods: newproducts, hotprods: hotproducts });
 });
@@ -140,6 +140,24 @@ router.get('/mycart', function (req, res) {
 router.post('/add2cart', async function (req, res) {
   var _id = req.body.txtID;
   var quantity = parseInt(req.body.txtQuantity);
+  var product = await ProductDAO.selectByID(_id);
+  // create empty cart if not exists in the session, otherwise get out mycart from the session
+  var mycart = [];
+  if (req.session.mycart) mycart = req.session.mycart;
+  var index = mycart.findIndex(x => x.product._id == _id); // check if the _id exists in mycart
+  if (index == -1) { // not found, push newItem
+    var newItem = { product: product, quantity: quantity };
+    mycart.push(newItem);
+  } else { // increasing the quantity
+    mycart[index].quantity += quantity;
+  }
+  req.session.mycart = mycart; // put mycart back into the session
+  //console.log(req.session.mycart); // for DBUG
+  res.redirect('./home');
+});
+router.post('/addSingleToCart', async function (req, res) {
+  var _id = req.body.txtID;
+  var quantity = 1;
   var product = await ProductDAO.selectByID(_id);
   // create empty cart if not exists in the session, otherwise get out mycart from the session
   var mycart = [];
