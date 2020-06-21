@@ -2,7 +2,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import session from 'express-session'
-import {HOST, PORT} from './constants/Constants'
+import {HOST, PORT} from './constants/Constants.js'
 import customer from './controllers/customer'
 import admin from './controllers/admin'
 
