@@ -109,10 +109,10 @@ router.post('/myprofile', async function (req, res) {
     var result = await CustomerDAO.update(newCust);
     if (result) {
       req.session.customer = newCust;
-      MyUtil.showAlertAndRedirect(res, 'OK BABY!', './home');
+      MyUtil.showAlertAndRedirect(res, 'Thành công!', './home');
     }
   }
-  MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './myprofile');
+  MyUtil.showAlertAndRedirect(res, 'Thất bại!', './myprofile');
 });
 // myorders
 router.get('/myorders', async function (req, res) {
@@ -175,9 +175,9 @@ router.get('/checkout', async function (req, res) {
     var result = await OrderDAO.insert(order);
     if (result) {
       delete req.session.mycart;
-      MyUtil.showAlertAndRedirect(res, 'OK BABY!', './home');
+      MyUtil.showAlertAndRedirect(res, 'Thành công!', './home');
     } else {
-      MyUtil.showAlertAndRedirect(res, 'SORRY BABY!', './mycart');
+      MyUtil.showAlertAndRedirect(res, 'Thất bại!', './mycart');
     }
   } else {
     res.redirect('./login');
