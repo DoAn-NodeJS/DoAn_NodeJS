@@ -12,7 +12,7 @@ import {
   myProfilePostService,
 } from "../service/myProfileService";
 import { myOrderService } from "../service/myOrderService";
-import { myCartService, addTowCartService, removeTowCartService } from "../service/cartService";
+import { myCartService, addTowCartService, removeTowCartService, addSingleToCart } from "../service/cartService";
 import { checkoutService } from "../service/checkoutService";
 
 const router = express.Router();
@@ -40,5 +40,6 @@ router.get("/mycart", myCartService);
 router.post("/add2cart", addTowCartService);
 router.get("/remove2cart", removeTowCartService);
 router.get("/checkout", checkoutService);
+router.post("/addSingleToCart", addSingleToCart)
 
 module.exports = router;
