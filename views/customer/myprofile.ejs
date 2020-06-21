@@ -2,55 +2,56 @@
 
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <style>
-    body {
+    body { 
       background-image: url("https://hoanghamobile.com/tin-tuc/wp-content/uploads/2019/11/ghep-nhac-vao-anh-bang-inshot-1.jpg");
       background-repeat: repeat-x;
       background-attachment: fixed;
-      background-position: center top;
+      background-position:  center top; 
       background-color: lemonchiffon;
-
-
+      
+      
     }
+    
   </style>
 </head>
 
 <body class="customer">
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
-
-  <div class="myprofile align-center">
+  
+  <div class="myprofile">
     <h2 class="rainbow-text">Thông Tin Tài Khoản</h2>
-    <div class="">
-      <form action="./myprofile" method="POST">
-        <div class="form-group">
-          <label for="email">Username:</label>
-          <input type="text" name="txtUsername" value="<%=session.customer.username%>" readonly class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="email">Password:</label>
-          <input type="password" name="txtPassword" value="<%=session.customer.password%>" pattern=".{3,}" required
-            class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="email">Name:</label>
-          <input type="text" name="txtName" value="<%=session.customer.name%>" required class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="email">Phone:</label>
-          <input type="tel" name="txtPhone" value="<%=session.customer.phone%>" pattern="0[0-9]{9}" required
-            class="form-control" />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" name="txtEmail" value="<%=session.customer.email%>" readonly class="form-control" />
-        </div>
-        <div class=" align-center">
-          <button type="submit" class="btn btn-primary align-self-center">Cập Nhật</button>
-      </form>
-    </div>
+    
+    <form action="./myprofile" method="POST">
+      <table class="align-center">
+        <tr>
+          <td class="myprofile-text">Username</td>
+          <td><input type="text" name="txtUsername" value="<%=session.customer.username%>" readonly /></td>
+        </tr>
+        <tr>
+          <td class="myprofile-text">Password</td>
+          <td><input type="password" name="txtPassword" value="<%=session.customer.password%>" pattern=".{3,}" required /></td>
+        </tr>
+        <tr>
+          <td class="myprofile-text">Name</td>
+          <td><input type="text" name="txtName" value="<%=session.customer.name%>" required /></td>
+        </tr>
+        <tr>
+          <td class="myprofile-text">Phone</td>
+          <td><input type="tel" name="txtPhone" value="<%=session.customer.phone%>" pattern="0[0-9]{9}" required /></td>
+        </tr>
+        <tr>
+          <td class="myprofile-text">Email</td>
+          <td><input type="email" name="txtEmail" value="<%=session.customer.email%>" readonly /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input class="btn btn-success" type="submit" value="Cập Nhật" /></td>
+        </tr>
+      </table>
+    </form>
   </div>
 </body>
 

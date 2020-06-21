@@ -26,10 +26,10 @@ const myProfilePostService = async(req,res)=>{
       const result = await CustomerDAO.update(newCust);
       if (result) {
         req.session.customer = newCust;
-        MyUtil.showAlertAndRedirect(res, 'Thành công!', "./home");
+        MyUtil.showAlertAndRedirect(res, "Thành công!", "./home");
       }
     }
-    MyUtil.showAlertAndRedirect(res, 'Thất bại!', "./myprofile");
+    MyUtil.showAlertAndRedirect(res, "oop, đã xảy ra lỗi!", "./myprofile");
 }
 
 export {
