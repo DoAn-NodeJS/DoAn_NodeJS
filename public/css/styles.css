@@ -81,14 +81,21 @@ padding-bottom: 110px;
   .vuong3 {  
     border-radius: 25px;
     background-color:whitesmoke;
-    padding: 190px;
-    padding-bottom: 60px;
+    padding: 450px;
+    padding-bottom: 250px;
       }
 .borderimg {
     border-radius: 25px;
 background:black;
 padding: 2px;
 width: 700px;
+height: 2px;
+  }
+  .borderimg3 {
+    border-radius: 25px;
+background:black;
+padding: 1px;
+width: 800px;
 height: 2px;
   }
   .borderimg2 {
