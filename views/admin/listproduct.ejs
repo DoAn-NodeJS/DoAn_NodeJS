@@ -29,7 +29,6 @@
 
 <body class="container">
   <%- include('./_menu.ejs') %>
-<<<<<<< HEAD
   <div class="row">
     <div class="col">
       <h2 class="text-center">PRODUCT LIST</h2>
@@ -51,65 +50,10 @@
           <td><%=new Date(item.cdate).toLocaleString()%></td>
           <td><%=item.category.name%></td>
           <td><img src="data:image/jpg;base64,<%=item.image%>" width="100" height="100" /></td>
-=======
-  <div class="float-left">
-    <h2 class="text-center">DANH SÁCH SẢN PHẨM</h2>
-    <table class="datatablec" border="1">
-      <tr class="datatablec">
-        <th>ID SẢN PHẨM</th>
-        <th>TÊN SẢN PHẨM</th>
-        <th>ĐƠN GIÁ</th>
-        <th>NGÀY THÊM VÀO</th>
-        <th>DANH MỤC</th>
-        <th>HÌNH ẢNH</th>
-      </tr>
-      <%  for (var item of prods) {  %>
-      <tr class="datatablec" onclick="details('<%=item._id%>', '<%=item.name%>', '<%=item.price%>', '<%=item.category.id%>', '<%=item.image%>')">
-        <th><%=item._id%></th>
-        <td><%=item.name%></td>
-        <td><%=item.price%></td>
-        <td><%=new Date(item.cdate).toLocaleString()%></td>
-        <td><%=item.category.name%></td>
-        <td><img src="data:image/jpg;base64,<%=item.image%>" width="100" height="100" /></td>
-      </tr>
-      <%  } %>
-      <!-- pagination -->
-      <tr>
-        <td colspan="6">
-          <%  for (var index = 1; index <= noPages; index++) {
-                if (index == curPage) { %>
-          | <b><%=index%></b> |
-          <%    } else {  %>
-          | <a href="./listproduct?page=<%=index%>"><%=index%></a> |
-          <%    } } %>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="inline" style="width: 40px"></div>
-  <div class="float-right">
-    <h2 class="text-center">CHI TIẾT SẢN PHẨM</h2>
-    <form method="POST" enctype="multipart/form-data">
-      <table>
-        <tr>
-          <td>ID SẢN PHẨM</td>
-          <td><input type="text" id="txtID" name="txtID" readonly /></td>
-        </tr>
-        <tr>
-          <td>TÊN SẢN PHẨM</td>
-          <td><input type="text" id="txtName" name="txtName" required />
-          </td>
-        </tr>
-        <tr>
-          <td>GIÁ</td>
-          <td><input type="number" id="txtPrice" name="txtPrice" min="1" max="999" required />
-          </td>
->>>>>>> f483daf4bb691542ae723c2bc017e30ed85f84af
         </tr>
         <%  } %>
         <!-- pagination -->
         <tr>
-<<<<<<< HEAD
           <td colspan="6">
             <%  for (var index = 1; index <= noPages; index++) {
                 if (index == curPage) { %>
@@ -117,27 +61,6 @@
             <%    } else {  %>
             | <a href="./listproduct?page=<%=index%>"><%=index%></a> |
             <%    } } %>
-=======
-          <td>ẢNH</td>
-          <td><input type="file" name="fileImage" accept="image/jpeg, image/png, image/gif" onchange="previewImage(this)" /></td>
-        </tr>
-        <tr>
-          <td>DANH MỤC</td>
-          <td>
-            <select id="cmbCategory" name="cmbCategory">
-              <%  for (var cat of cats) { %>
-              <option value="<%=cat._id%>"><%=cat.name%></option>
-              <%  } %>
-            </select>
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            <input type="submit" formaction="./addproduct" value="THÊM MỚI" />
-            <input type="submit" formaction="./updateproduct" value="CẬP NHẬT" id="btnUpdate" style="display: none" />
-            <input type="submit" formaction="./deleteproduct" value="XÓA" id="btnDelete" style="display: none" onclick="return confirm('BẠN CHẮC CHỨ?')" />
->>>>>>> f483daf4bb691542ae723c2bc017e30ed85f84af
           </td>
         </tr>
       </table>

@@ -11,27 +11,26 @@
 <body class="container">
   <%- include('./_menu.ejs') %>
   <%  if (orders) { %>
-  <div>
-    <h2>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;DANH SÁCH ĐƠN HÀNG</h2>
-    <table style="position:absolute; left:20px; top:350px" class="datatableb" border="1">
-      <tr class="datatableb">
-        <th style="font-size: small;" >MÃ TÀI KHOẢN</th>
-        <th style="font-size: small;">NGÀY TẠO</th>
-        <th style="font-size: small;">TÊN NGƯỜI DÙNG</th>
-        <th style="font-size: small;">SỐ ĐIỆN THOẠI</th>
-        <th style="font-size: small;">TỔNG</th>
-        <th style="font-size: small;">TÌNH TRẠNG</th>
-        <th style="font-size: small;">HÀNH ĐỘNG</th>
+  <div class="align-center">
+    <h2 class="text-center">ORDER LIST</h2>
+    <table class="datatable" border="1">
+      <tr class="datatable">
+        <th>ID</th>
+        <th>Creation date</th>
+        <th>Cust.name</th>
+        <th>Cust.phone</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Action</th>
       </tr>
       <%  for (var item of orders) { %>
       <tr class="datatable" onclick="window.location='./listorder?id=<%=item._id%>'">
-        <th style="font-size: small;"><%=item._id%></th>
-        <td style="font-size: small;"><%=new Date(item.cdate).toLocaleString()%></td>
-        <td style="font-size: small;"><%=item.customer.name%></td>
-        <td style="font-size: small;"><%=item.customer.phone%></td>
-        <td style="font-size: small;"><%=item.total%></td>
-        <td style="font-size: small;"><%=item.status%></td>
-        <h1></h1>
+        <th><%=item._id%></th>
+        <td><%=new Date(item.cdate).toLocaleString()%></td>
+        <td><%=item.customer.name%></td>
+        <td><%=item.customer.phone%></td>
+        <td><%=item.total%></td>
+        <td><%=item.status%></td>
         <td>
           <%  if (item.status == 'PENDING') {  %>
           <a href="./updatestatus?status=APPROVED&id=<%=item._id%>">APPROVE</a>
@@ -46,21 +45,23 @@
   <%  } %>
   <%  if (order) { %>
   <div class="align-center">
-    <h2 style=" position:absolute; left:1000px; top:280px">CHI TIẾT GIỎ HÀNG</h2>
-    <table class="datatableo" border="1">
-      <tr class="datatableo">
-        <th>ID SẢN PHẨM</th>
-        <th>TÊN SẢN PHẨM</th>
-        <th>ẢNH</th>
-        <th>GIÁ</th>
-        <th>SỐ LƯỢNG</th>
-        <th>TỔNG</th>
+    <h2 class="text-center">ORDER DETAIL</h2>
+    <table class="datatable" border="1">
+      <tr class="datatable">
+        <th>No.</th>
+        <th>Prod.ID</th>
+        <th>Prod.name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Amount</th>
       </tr>
       <%  for (var [i, item] of order.items.entries()) {  %>
-      <tr class="datatableo">
+      <tr class="datatable">
+        <td><%=(i+1)%></td>
         <td><%=item.product._id%></td>
         <td><%=item.product.name%></td>
-        <td><img src="data:image/jpg;base64,<%=item.product.image%>" width="40" height="40" /></td>
+        <td><img src="data:image/jpg;base64,<%=item.product.image%>" width="70" height="70" /></td>
         <td><%=item.product.price%></td>
         <td><%=item.quantity%></td>
         <td><%=item.product.price * item.quantity%></td>

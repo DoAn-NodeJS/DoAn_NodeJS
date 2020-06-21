@@ -23,7 +23,6 @@
 
 <body class="container">
   <%- include('./_menu.ejs') %>
-<<<<<<< HEAD
   <div class="row">
     <div class="col">
         <h2 class="text-center">CATEGORY LIST</h2>
@@ -65,49 +64,6 @@
         </form>
     </div>
   </div>
-=======
-  <div class="float-left">
-    <h2 class="text-center-listcate">DANH MỤC SẢN PHẨM</h2>
-    <table class="datatable" border="1">
-      <tr class="datatable">
-        <th>MÃ DANH MỤC</th>
-        <th>TÊN DANH MỤC</th>
-      </tr>
-      <%  for (var item of cats) {  %>
-      <tr class="datatable" onclick="details('<%=item._id%>', '<%=item.name%>')">
-        <th><%=item._id%></th>
-        <td><%=item.name%></td>
-      </tr>
-      <%  } %>
-    </table>
-  </div>
-  <div class="inline" style="width: 40px"></div>
-  <div class="float-right">
-    <h2 class="text-center">CHI TIẾT DANH MỤC</h2>
-    <form method="POST">
-      <table>
-        <tr>
-          <td>ID DANH MỤC</td>
-          <td><input type="text" id="txtID" name="txtID" readonly /></td>
-        </tr>
-        <tr>
-          <td>TÊN DANH MỤC</td>
-          <td><input type="text" id="txtName" name="txtName" required />
-          </td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            <input type="submit" formaction="./addcategory" value="THÊM MỚI" />
-            <input type="submit" formaction="./updatecategory" value="CẬP NHẬT" id="btnUpdate" style="display: none" />
-            <input type="submit" formaction="./deletecategory" value="XÓA" id="btnDelete" style="display: none" onclick="return confirm('ARE YOU SURE?')" />
-          </td>
-        </tr>
-      </table>
-    </form>
-  </div>
-  <div class="float-clear"></div>
->>>>>>> f483daf4bb691542ae723c2bc017e30ed85f84af
 </body>
 
 </html>
