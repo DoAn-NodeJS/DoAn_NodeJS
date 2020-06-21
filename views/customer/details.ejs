@@ -2,41 +2,48 @@
 
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <style>
+    body{
+      background-image: url(https://data.whicdn.com/images/269842832/original.gif);
+    }
+  </style>
 </head>
 
 <body class="customer">
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
-  <div class="align-center">
-    <h2 class="text-center">PRODUCT DETAILS</h2>
-    <figure class="caption-right">
-      <img src="data:image/jpg;base64,<%=prod.image%>" width="400" height="400" />
+  <div>
+    <h2 class="text-center">CHI TIẾT SẢN PHẨM</h2>
+    <h1 style=" position:absolute; left:700px; top:200px" class="vuong3"></h1>
+    <figure>
+      <img style=" position:absolute; left:230px; top:200px" src="data:image/jpg;base64,<%=prod.image%>" width="300" height="300" />
       <figcaption>
         <form action="./add2cart" method="POST">
           <table>
             <tr>
-              <td align="right">ID:</td>
-              <td><%=prod._id%></td>
+              <td style=" position:absolute; left:740px; top:250px"align="right">ID:</td>
+              <td style=" position:absolute; left:840px; top:250px"><%=prod._id%></td>
             <tr>
             <tr>
-              <td align="right">Name:</td>
-              <td><%=prod.name%></td>
+              <td style=" position:absolute; left:740px; top:270px"align="right">Name:</td>
+              <td style=" position:absolute; left:840px; top:270px" ><%=prod.name%></td>
             <tr>
             <tr>
-              <td align="right">Price:</td>
-              <td><%=prod.price%></td>
+              <td style=" position:absolute; left:740px; top:290px" align="right">Price:</td>
+              <td style=" position:absolute; left:840px; top:290px"><%=prod.price%></td>
             <tr>
             <tr>
-              <td align="right">Category:</td>
-              <td><%=prod.category.name%></td>
+              <td style=" position:absolute; left:740px; top:310px" align="right">Category:</td>
+              <td style=" position:absolute; left:840px; top:310px"><%=prod.category.name%></td>
             <tr>
             <tr>
-              <td align="right">Quantity:</td>
-              <td><input type="number" name="txtQuantity" value="1" min="1" max="99" required /></td>
+              <td style=" position:absolute; left:740px; top:330px"align="right">Quantity:</td>
+              <td style=" position:absolute; left:840px; top:330px"><input type="number" name="txtQuantity" value="1" min="1" max="99" required /></td>
             <tr>
             <tr>
               <td><input type="hidden" name="txtID" value="<%=prod._id%>" /></td>
-              <td><input type="submit" value="ADD TO CART" /></td>
+              <td style=" position:absolute; left:800px; top:370px" ><input class="btn btn-success" type="submit" value="ADD TO CART" /></td>
             </tr>
           </table>
         </form>
