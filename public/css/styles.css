@@ -1,8 +1,14 @@
 @import url("./menu.css");
 @import url("./datatable.css");
 
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 body.customer {
-    width: 1150px;
+    /* width: 1150px; */
     height: fit-content;
     margin: 0px auto;
      /* border: 1px solid black; */
