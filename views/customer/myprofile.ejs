@@ -2,38 +2,46 @@
 
 <head>
   <link href="/css/styles.css" type="text/css" rel="stylesheet" />
+  <style>
+    body{
+
+      background-image: url(https://data.whicdn.com/images/269842832/original.gif);
+      
+    }
+  </style>
 </head>
 
 <body class="customer">
   <%- include('./_menu.ejs') %>
   <%- include('./_inform.ejs') %>
   <div class="align-center">
-    <h2 class="text-center">MY PROFILE</h2>
+    <a style=" position:absolute; left:420px; top:110px" class="vuong2"></a>
+    <h2 style=" position:absolute; left:535px; top:110px" class="text-center">HỒ SƠ CỦA TÔI</h2>
     <form action="./myprofile" method="POST">
       <table class="align-center">
         <tr>
-          <td>Username</td>
-          <td><input type="text" name="txtUsername" value="<%=session.customer.username%>" readonly /></td>
+          <td style="font-size:large; position:absolute; left:470px; top:170px">Tên tài khoản</td>
+          <td style=" position:absolute; left:580px; top:170px"><input type="text" name="txtUsername" value="<%=session.customer.username%>" readonly /></td>
         </tr>
         <tr>
-          <td>Password</td>
-          <td><input type="password" name="txtPassword" value="<%=session.customer.password%>" pattern=".{3,}" required /></td>
+          <td style="font-size:large; position:absolute; left:500px; top:210px">Mật khẩu</td>
+          <td style=" position:absolute; left:580px; top:210px"><input type="password" name="txtPassword" value="<%=session.customer.password%>" pattern=".{3,}" required /></td>
         </tr>
         <tr>
-          <td>Name</td>
-          <td><input type="text" name="txtName" value="<%=session.customer.name%>" required /></td>
+          <td style="font-size:large; position:absolute; left:540px; top:250px" >Tên</td>
+          <td style=" position:absolute; left:580px; top:250px"><input type="text" name="txtName" value="<%=session.customer.name%>" required /></td>
         </tr>
         <tr>
-          <td>Phone</td>
-          <td><input type="tel" name="txtPhone" value="<%=session.customer.phone%>" pattern="0[0-9]{9}" required /></td>
+          <td style="font-size:large; position:absolute; left:535px; top:290px">SĐT</td>
+          <td style=" position:absolute; left:580px; top:290px"><input type="tel" name="txtPhone" value="<%=session.customer.phone%>" pattern="0[0-9]{9}" required /></td>
         </tr>
         <tr>
-          <td>Email</td>
-          <td><input type="email" name="txtEmail" value="<%=session.customer.email%>" readonly /></td>
+          <td style="font-size:large; position:absolute; left:525px; top:330px">Email</td>
+          <td style=" position:absolute; left:580px; top:330px"><input type="email" name="txtEmail" value="<%=session.customer.email%>" readonly /></td>
         </tr>
         <tr>
           <td></td>
-          <td><input type="submit" value="UPDATE" /></td>
+          <td style=" position:absolute; left:600px; top:370px"><input type="submit" value="UPDATE" /></td>
         </tr>
       </table>
     </form>
