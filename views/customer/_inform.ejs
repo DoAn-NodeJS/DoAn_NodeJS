@@ -1,14 +1,74 @@
-
-  <div class="border-bottom">
-  <div class="float-left">
+<!-- 
+  <div class="">
+  <div class="">
     <%  if (session.customer) {  %>
     Xin chào <b><%=session.customer.name%></b> | <a href="./logout">Đăng xuất</a> | <a href="./myprofile">Hồ sơ của tôi</a> | <a href="./myorders">Lịch sử đặt hàng</a>
     <%  } else {  %>
     <a href="./login">Đăng Nhập</a> | <a href="./signup">Đăng ký</a>
     <%  } %>
   </div>
-  <div class="float-right">
+  <div class="">
     <a href="./mycart">Giỏ hàng</a> đang có <b><%= (session.mycart) ? session.mycart.length : 0 %></b> sản phẩm
   </div>
   <div class="float-clear"></div>
-</div>
+</div> -->
+
+<!-- 
+<nav class="justify-content-between">
+  <ul class="nav">
+    <%  if (session.customer) {  %>
+      <li class="nav-item">
+        <a class="nav-link active" href="#"> Xin chào <b><%=session.customer.name%></b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="./logout">Đăng xuất</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="./myprofile">Hồ sơ của tôi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="./myorders">Lịch sử đặt hàng</a>
+      </li>
+      <%  } else {  %>
+        <li class="nav-item">
+          <a class="nav-link active" href="./login">Đăng Nhập</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="./signup">Đăng ký</a>
+        </li>
+      <%  } %>
+  </ul>
+  <div class="p-2">abc</div><br>
+</div> -->
+
+
+<nav class="navbar navbar-light bg-light navbar-expand-lg">
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto navbar-light bg-light">
+      <%  if (session.customer) {  %>
+      <li class="nav-item">
+        <a class="nav-link active" href="#"> Xin chào <b><%=session.customer.name%></b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="./logout">Đăng xuất</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="./myprofile">Hồ sơ của tôi</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="./myorders">Lịch sử đặt hàng</a>
+      </li>
+      <%  } else {  %>
+      <li class="nav-item">
+        <a class="nav-link active" href="./login">Đăng Nhập</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="./signup">Đăng ký</a>
+      </li>
+      <%  } %>
+    </ul>
+    <span class="navbar-text">
+      <a href="./mycart">Giỏ hàng</a> đang có <b><%= (session.mycart) ? session.mycart.length : 0 %></b> sản phẩm
+    </span>
+  </div>
+</nav>
