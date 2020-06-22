@@ -1,5 +1,5 @@
-const CategoryDAO = require("../daos/mongoose/CategoryDAO");
-const ProductDAO = require("../daos/mongoose/ProductDAO");
+import CategoryDAO from "../daos/mongoose/CategoryDAO.js";
+import ProductDAO from "../daos/mongoose/ProductDAO.js";
 
 export const listproductService = async (req, res)=> {
     const categories = await CategoryDAO.selectAll();

@@ -1,4 +1,4 @@
-var client = require("../../utils/MongodbUtil.js");
+ import * as client from "../../utils/MongodbUtil.js";
 var AdminDAO = {
   async selectByUsernameAndPassword(username, password) {
     var query = { username: username, password: password };
@@ -7,4 +7,4 @@ var AdminDAO = {
     return admin;
   }
 };
-module.exports = AdminDAO;
+export default AdminDAO;

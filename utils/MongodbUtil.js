@@ -1,6 +1,7 @@
 //CLI: npm install mongodb --save
-var MongoClient = require('mongodb').MongoClient;
-var MyConstants = require('./MyConstants.js');
+import mongodb from 'mongodb';
+const MongoClient = mongodb.MongoClient
+import MyConstants from './MyConstants.js';
 // singleton
 var db = null;
 var getDB = async () => {
@@ -10,4 +11,4 @@ var getDB = async () => {
   db = conn.db(MyConstants.DB_DATABASE);
   return db;
 };
-module.exports = { getDB: getDB };
+export { getDB };

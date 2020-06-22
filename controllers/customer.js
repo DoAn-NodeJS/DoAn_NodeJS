@@ -1,19 +1,19 @@
 import express from "express";
-import { homeService } from "../service/homeService";
-import { listproductService } from "../service/listProductService";
-import { searchService } from "../service/searchService";
-import { detailsService } from "../service/detailsService";
-import { signUpGetService, signUpPostService } from "../service/signUpService";
-import { verifyService } from "../service/verifyService";
-import { loginGetService, loginPostService } from "../service/loginService";
-import { logOutService } from "../service/logOutService";
+import { homeService } from "../service/homeService.js";
+import { listproductService } from "../service/listProductService.js";
+import { searchService } from "../service/searchService.js";
+import { detailsService } from "../service/detailsService.js";
+import { signUpGetService, signUpPostService } from "../service/signUpService.js";
+import { verifyService } from "../service/verifyService.js";
+import { loginGetService, loginPostService } from "../service/loginService.js";
+import { logOutService } from "../service/logOutService.js";
 import {
   myProfileGetService,
   myProfilePostService,
-} from "../service/myProfileService";
-import { myOrderService } from "../service/myOrderService";
-import { myCartService, addTowCartService, removeTowCartService, addSingleToCart } from "../service/cartService";
-import { checkoutService } from "../service/checkoutService";
+} from "../service/myProfileService.js";
+import { myOrderService } from "../service/myOrderService.js";
+import { myCartService, addTowCartService, removeTowCartService, addSingleToCart } from "../service/cartService.js";
+import { checkoutService } from "../service/checkoutService.js";
 
 const router = express.Router();
 // routes
@@ -42,4 +42,4 @@ router.get("/remove2cart", removeTowCartService);
 router.get("/checkout", checkoutService);
 router.post("/addSingleToCart", addSingleToCart)
 
-module.exports = router;
+export default router;

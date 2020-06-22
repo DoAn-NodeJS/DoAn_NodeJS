@@ -1,4 +1,4 @@
-import OrderDAO from '../daos/mongoose/OrderDAO';
+import OrderDAO from '../daos/mongoose/OrderDAO.js';
 export const myOrderService = async(req,res)=>{
     const cust = req.session.customer;
   if (cust) {

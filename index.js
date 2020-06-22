@@ -3,8 +3,8 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import session from 'express-session'
 import {HOST, PORT} from './constants/Constants.js'
-import customer from './controllers/customer'
-import admin from './controllers/admin'
+import customer from './controllers/customer.js'
+import admin from './controllers/admin.js'
 
 const app = express();
 // middlewares

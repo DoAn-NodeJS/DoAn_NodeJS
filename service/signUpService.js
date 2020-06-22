@@ -1,6 +1,6 @@
-import EmailUtil from "../utils/EmailUtil";
-import CustomerDAO from '../daos/mongoose/CustomerDAO'
-import MyUtil from "../utils/MyUtil";
+import EmailUtil from "../utils/EmailUtil.js";
+import CustomerDAO from '../daos/mongoose/CustomerDAO.js'
+import MyUtil from "../utils/MyUtil.js";
 
 export const signUpGetService = (req, res) => {
   res.render("customer/signup");

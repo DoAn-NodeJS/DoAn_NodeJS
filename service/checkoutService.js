@@ -1,5 +1,5 @@
-import OrderDAO from "../daos/mongoose/OrderDAO";
-import MyUtil from "../utils/MyUtil";
+import OrderDAO from "../daos/mongoose/OrderDAO.js";
+import MyUtil from "../utils/MyUtil.js";
 
 export const checkoutService = async (req, res) => {
   if (req.session.customer) {

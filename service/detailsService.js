@@ -1,4 +1,4 @@
-import ProductDAO from "../daos/mongoose/ProductDAO";
+import ProductDAO from "../daos/mongoose/ProductDAO.js";
 
 export const detailsService = async (req, res) => {
   var _id = req.query.id; // /details?id=XXX

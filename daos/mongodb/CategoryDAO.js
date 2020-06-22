@@ -1,5 +1,6 @@
-var client = require("../../utils/MongodbUtil.js");
-var ObjectId = require('mongodb').ObjectId;
+import * as client from "../../utils/MongodbUtil.js";
+import mongodb from 'mongodb'
+const ObjectId = mongodb.ObjectId;
 var CategoryDAO = {
   async selectAll() {
     var query = {};
@@ -32,4 +33,4 @@ var CategoryDAO = {
     return result.result.n > 0 ? true : false;
   }
 };
-module.exports = CategoryDAO;
+export default CategoryDAO;

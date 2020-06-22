@@ -1,20 +1,20 @@
 //CLI: npm install multer --save
-var express = require('express');
+import express from 'express';
 var router = express.Router();
 // middleware
-var multer = require('multer');
+import multer from 'multer';
 var upload = multer({});
 // utils
-var MyUtil = require("../utils/MyUtil.js");
-var EmailUtil = require("../utils/EmailUtil.js");
+import MyUtil from "../utils/MyUtil.js";
+import EmailUtil from "../utils/EmailUtil.js";
 // daos
 //var pathDAO = "../daos/mongodb";
 var pathDAO = "../daos/mongoose";
-var AdminDAO = require(pathDAO + "/AdminDAO.js");
-var OrderDAO = require(pathDAO + "/OrderDAO.js");
-var CategoryDAO = require(pathDAO + "/CategoryDAO.js");
-var ProductDAO = require(pathDAO + "/ProductDAO.js");
-var CustomerDAO = require(pathDAO + "/CustomerDAO.js");
+import AdminDAO from "../daos/mongodb/AdminDAO.js";
+import OrderDAO from "../daos/mongodb/OrderDAO.js";
+import CategoryDAO from "../daos/mongodb/CategoryDAO.js";
+import ProductDAO from "../daos/mongodb/ProductDAO.js";
+import CustomerDAO from "../daos/mongodb/CustomerDAO.js";
 // routes
 router.get(['/', '/home'], function (req, res) {
   if (req.session.admin) {
@@ -188,4 +188,4 @@ router.get('/deactive', async function (req, res) {
     MyUtil.showAlertAndRedirect(res, 'Thất Bại!', './listcustomer');
   }
 });
-module.exports = router;
+export default router;

@@ -1,4 +1,4 @@
-require('../../utils/MongooseUtil.js');
+import * as client from "../../utils/MongodbUtil.js";
 var Models = require('../../models/Models.js');
 var AdminDAO = {
   async selectByUsernameAndPassword(username, password) {

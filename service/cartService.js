@@ -1,5 +1,5 @@
-import MyUtil from "../utils/MyUtil";
-import ProductDAO from "../daos/mongoose/ProductDAO";
+import MyUtil from "../utils/MyUtil.js";
+import ProductDAO from "../daos/mongoose/ProductDAO.js";
 export const myCartService = async (req, res) => {
   if (req.session.mycart && req.session.mycart.length > 0) {
     const total = MyUtil.getTotal(req.session.mycart);

@@ -1,5 +1,6 @@
-var client = require("../../utils/MongodbUtil.js");
-var ObjectId = require('mongodb').ObjectId;
+import * as client from "../../utils/MongodbUtil.js";
+import mongodb from 'mongodb'
+const ObjectId = mongodb.ObjectId;
 var OrderDAO = {
   async selectAll() {
     var query = {};
@@ -45,4 +46,4 @@ var OrderDAO = {
     return result.result.nModified > 0 ? true : false;
   }
 };
-module.exports = OrderDAO;
+export default OrderDAO;

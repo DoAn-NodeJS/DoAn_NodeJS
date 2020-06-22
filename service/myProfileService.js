@@ -1,5 +1,5 @@
-import CustomerDAO from "../daos/mongoose/CustomerDAO";
-import MyUtil from "../utils/MyUtil";
+import CustomerDAO from "../daos/mongoose/CustomerDAO.js";
+import MyUtil from "../utils/MyUtil.js";
 
 const myProfileGetService = (req,res)=>{
     res.render("customer/myprofile");

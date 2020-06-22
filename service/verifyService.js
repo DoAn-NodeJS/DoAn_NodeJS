@@ -1,5 +1,5 @@
-import CustomerDAO from "../daos/mongoose/CustomerDAO";
-import MyUtil from "../utils/MyUtil";
+import CustomerDAO from "../daos/mongoose/CustomerDAO.js";
+import MyUtil from "../utils/MyUtil.js";
 
 export const verifyService = async (req, res) => {
   var _id = req.query.id; // /verify?id=XXX&token=XXX

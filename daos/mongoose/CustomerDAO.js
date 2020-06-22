@@ -1,5 +1,5 @@
-require('../../utils/MongooseUtil.js');
-var Models = require('../../models/Models.js');
+import * as MongooseUtil from '../../utils/MongooseUtil.js';
+import Models from '../../models/Models.js';
 var CustomerDAO = {
   async selectAll() {
     var query = {};
@@ -38,4 +38,4 @@ var CustomerDAO = {
     return result ? true : false;
   }
 };
-module.exports = CustomerDAO;
+export default CustomerDAO;

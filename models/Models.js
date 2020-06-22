@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 // schemas
 var AdminSchema = mongoose.Schema({
@@ -52,4 +52,4 @@ var Category = mongoose.model('Category', CategorySchema);
 var Customer = mongoose.model('Customer', CustomerSchema);
 var Product = mongoose.model('Product', ProductSchema);
 var Order = mongoose.model('Order', OrderSchema);
-module.exports = { Admin, Category, Customer, Product, Order };
+export default { Admin, Category, Customer, Product, Order };

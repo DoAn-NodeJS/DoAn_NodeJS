@@ -1,5 +1,5 @@
-import CategoryDAO from '../daos/mongoose/CategoryDAO'
-import ProductDAO from '../daos/mongoose/ProductDAO'
+import CategoryDAO from '../daos/mongoose/CategoryDAO.js'
+import ProductDAO from '../daos/mongoose/ProductDAO.js'
 
 export const homeService = async (req, res)=>{
     const categories = await CategoryDAO.selectAll();

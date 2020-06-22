@@ -1,6 +1,6 @@
 //CLI: npm install nodemailer --save
-var nodemailer = require('nodemailer');
-var MyConstants = require("./MyConstants.js");
+import nodemailer from 'nodemailer';
+import MyConstants from "./MyConstants.js";
 var transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
@@ -26,4 +26,4 @@ var EmailUtil = {
     });
   }
 };
-module.exports = EmailUtil;
+export default EmailUtil;

@@ -20,4 +20,4 @@ var MyUtil = {
     return hash;
   }
 };
-module.exports = MyUtil;
+export default MyUtil;

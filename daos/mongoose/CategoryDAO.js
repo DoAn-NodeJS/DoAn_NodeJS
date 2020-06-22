@@ -1,5 +1,5 @@
-require('../../utils/MongooseUtil.js');
-var Models = require('../../models/Models.js');
+import * as MongooseUtil from '../../utils/MongooseUtil.js';
+import Models from '../../models/Models.js';
 var CategoryDAO = {
   async selectAll() {
     var query = {};
@@ -26,4 +26,4 @@ var CategoryDAO = {
     return result ? true : false;
   }
 };
-module.exports = CategoryDAO;
+export default CategoryDAO;

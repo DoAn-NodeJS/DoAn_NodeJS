@@ -7,4 +7,4 @@ var MyConstants = {
   EMAIL_USER: 'nodejsk24vlu@gmail.com',
   EMAIL_PASS: 'VLUnodejsk24',
 };
-module.exports = MyConstants;
+export default MyConstants;
